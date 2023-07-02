@@ -13,32 +13,28 @@ public class User {
         this.books = new ArrayList<>();
     }
 
-    public boolean borrowBook(Book book, Library library) {
-        if(library.removeBook(book)) {
+    public void borrowBook(Book book, Library library) {
+        if(library.loanBook(book, this)) {
             this.books.add(book);
-            return true;
         } else {
-            System.out.println("This book is not available " +
-                    "in the library.");
-            return false;
+            System.out.println("This book is not available for loan.");
         }
     }
 
     public boolean returnBook(Book book, Library library) {
-        if(this.books.contains(book)) {
-            this.books.remove(book);
-            library.addBook(book);
-            return true;
+        if(this.books.contains(book) && library.returnBook(book, this)) {
+                this.books.remove(book);
+                return true;
         } else {
             System.out.println( this.name +
-                    " doesn't have " + book.getTitle() +
-                    "to return.");
+                    "doesn't have" +
+                    book.getTitle() +
+                    ".");
             return false;
         }
-
     }
 
-    public  void printBooks() {
+    public void printBooks() {
         for (Book book : books) {
             System.out.println(book.getTitle());
         }

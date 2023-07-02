@@ -2,9 +2,9 @@ import java.util.UUID;
 
 public class Book {
     //fields
-    private String title;
-    private String author;
-    private String isbn;
+    private final String title;
+    private final String author;
+    private final String isbn;
     private Boolean loanFlag;
 
     public Book(String title, String author, String isbn) {
