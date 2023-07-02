@@ -1,12 +1,24 @@
+import java.util.UUID;
+
 public class Book {
+    //fields
     private String title;
     private String author;
     private String isbn;
+    private Boolean loanFlag;
 
     public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
+    }
+
+
+    public boolean getLoanFlag() {
+        return loanFlag;
+    }
+    public void setLoanFlag(boolean value) {
+        loanFlag = value;
     }
 
     public String getTitle() {
