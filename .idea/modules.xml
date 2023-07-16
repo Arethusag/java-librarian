@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Java Basics in IntelliJ.iml" filepath="$PROJECT_DIR$/Java Basics in IntelliJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-librarian.iml" filepath="$PROJECT_DIR$/java-librarian.iml" />
     </modules>
   </component>
 </project>
